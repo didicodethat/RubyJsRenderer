@@ -1,0 +1,13 @@
+services:
+  app:
+    image: ruby
+    volumes:
+      - .:/usr/src/myapp 
+    tty: true
+    stdin_open: true
+    working_dir: /usr/src/myapp/app
+    command: 
+      - ruby
+      - app.rb
+    environment:
+      - DEBUGGING=true
